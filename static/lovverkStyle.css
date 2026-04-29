@@ -1,0 +1,10 @@
+* {
+    font-family: 'DM Sans', sans-serif;
+	box-sizing: border-box;
+	background-color: #0d1b2a;
+}
+
+html {
+    margin: 0;
+    overflow: hidden;
+}
