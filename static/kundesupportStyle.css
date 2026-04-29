@@ -1,10 +1,54 @@
 * {
     font-family: 'DM Sans', sans-serif;
-	box-sizing: border-box;
-	background-color: #0d1b2a;
+    box-sizing: border-box;
+    background-color: #0d1b2a;
 }
 
 html {
     margin: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+	margin-left: 10%;
+	margin-right: 10%;
+	color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+section {
+    width: 55%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section p {
+    font-size: 1.1em;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    background: #1e3448;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background 150ms ease, transform 150ms ease;
+}
+
+section ul li:hover {
+    background: #3b82f6; 
+    transform: translateY(-2px);
 }

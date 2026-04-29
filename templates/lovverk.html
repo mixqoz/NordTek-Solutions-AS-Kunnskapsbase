@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{{ url_for('static', filename='lovverkStyle.css') }}">
-	<title>Lovverk</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='lovverkStyle.css') }}">
+    <title>Lovverk</title>
 </head>
 <body>
+    <!-- Importer navbar -->
 	{% include 'navbar.html' %}
+
+	<br>
+
+    <!-- Overskrift -->
+    <h1>Relevant Lovverk for NordTek Solutions AS</h1>
+	
+	<div class="content">
+		 <section>
+        <ul>
+            <li>
+                <h2>Personopplysningsloven (GDPR)</h2>
+                <p>Regulerer behandling av personopplysninger og personvern i EU og EØS.</p>
+            </li>
+            <li>
+                <h2>Ekomloven</h2>
+                <p>Regulerer elektronisk kommunikasjon og tjenester i Norge.</p>
+            </li>
+            <li>
+                <h2>Åndsverkloven</h2>
+                <p>Beskyttelse av opphavsrett og intellektuell eiendom.</p>
+            </li>
+            <li>
+                <h2>Nettstedsikkerhetsloven</h2>
+                <p>Regulerer cybersikkerhet og rapporteringsplikt for kritisk infrastruktur.</p>
+            </li>
+        </ul>
+    </section>
+	</div>
+   
+
 </body>
 </html>

@@ -3,6 +3,8 @@ import os
 
 app = Flask(__name__)
 
+# All ruter
+
 @app.route('/')
 def hjem():
 	return render_template('index.html')

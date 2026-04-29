@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{{ url_for('static', filename='artikklerStyle.css') }}">
-	<title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='artikklerStyle.css') }}">
+    <title>Artikkler - Guider og FAQ</title>
 </head>
 <body>
-	{% include 'navbar.html' %}
+    {% include 'navbar.html' %}
+    
+    <br>
+    <div class="content">
+        <h1>Artikkler</h1>
+
+		<br>
+        
+		<!-- FAQ seksjon -->
+        <h2>Ofte Stilte Spørsmål (FAQ)</h2>
+        <div class="accordion">
+            
+            <div class="accordion-item">
+                <button class="accordion-header">Hvordan beskytter jeg personopplysninger?</button>
+                <div class="accordion-body">
+                    <p>Det er viktig å følge GDPR-regelverket og implementere passende sikkerhetstiltak i dine IT-systemer.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">Hva er vanlig praksis for datasikkerhet?</button>
+                <div class="accordion-body">
+                    <p>Bruk kryptering, tofaktorautentisering og regelmessige sikkerhetskopier for å sikre data.</p>
+                </div>
+            </div>
+            
+        </div>
+
+		<br>
+
+		<!-- Guider seksjon -->
+        <h2>Guider</h2>
+        <div class="accordion">
+
+            <div class="accordion-item">
+                <button class="accordion-header">Slik setter du opp en sikker nettside</button>
+                <div class="accordion-body">
+                    <p>Følg best practices for SSL-sertifikater, oppdateringer og sikkerhetstiltak.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">Hvordan håndtere dataoverføring</button>
+                <div class="accordion-body">
+                    <p>Bruk kryptering og sikre protokoller som HTTPS for data som overføres.</p>
+                </div>
+            </div>
+            <!-- Flere guider -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for å håndtere accordion
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+
+                const panel = item.querySelector('.accordion-body');
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
