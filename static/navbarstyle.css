@@ -1,6 +1,6 @@
 *, *::before, *::after { box-sizing: border-box; }
 
-/* Collective of all colours on the page */
+/* Kolleksjon av alle farger på siden */
 :root {
     --nav-bg:         #0d1b2a;
     --nav-border:     #1e3448;
@@ -72,8 +72,14 @@ body { margin: 0; padding-top: var(--nav-height); }
     transition: background var(--transition), color var(--transition);
     white-space: nowrap;
 }
-.navbar_link:hover { background: var(--nav-hover-bg); color: var(--nav-text-hover); }
-.navbar_link--active { color: var(--nav-accent); background: rgba(59,130,246,.1); }
+.navbar_link:hover { 
+    background: var(--nav-hover-bg); 
+    color: var(--nav-text-hover); 
+}
+.navbar_link--active { 
+    color: var(--nav-accent); 
+    background: rgba(59,130,246,.1); 
+}
 
 .navbar_toggle {
     display: none;
@@ -101,7 +107,7 @@ body { margin: 0; padding-top: var(--nav-height); }
 .navbar_toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 
-/* Responsive for smaller devices (mobiles) */
+/* Responsivt for mindre enheter (mobil) */
 @media (max-width: 640px) {
     .navbar_toggle { display: flex; }
     .navbar_links {

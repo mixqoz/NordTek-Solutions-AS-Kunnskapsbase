@@ -60,6 +60,7 @@
 
     <script>
         // JavaScript for å håndtere accordion
+        // Skjekker om bruker har klikket header og åpner/lukker body korrespnt ved å endre høyde
         document.querySelectorAll('.accordion-header').forEach(button => {
             button.addEventListener('click', () => {
                 const item = button.parentElement;
