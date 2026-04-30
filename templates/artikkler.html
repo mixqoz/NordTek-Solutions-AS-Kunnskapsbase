@@ -54,7 +54,29 @@
                     <p>Bruk kryptering og sikre protokoller som HTTPS for data som overføres.</p>
                 </div>
             </div>
-            <!-- Flere guider -->
+
+            <div class="accordion-item">
+                <button class="accordion-header">Hvordan logge inn</button>
+                <div class="accordion-body">
+                    <p>Henvend deg til vår offisielle side: nordtek.no og se oppe i høyre hjørne for innloggings knappen.
+                        Logg inn med brukernavn og passord.
+                    </p>
+                </div>
+            </div>
+
+           <div class="accordion-item">
+                <button class="accordion-header">Hvordan tilbakestille passord</button>
+                <div class="accordion-body">
+                    <p>Dersom du ønsker å tilbakestille passordet ditt:</p>
+                    <br>
+                    <ol class="accordion-list">
+                        <li>Trykk "Glemt passord" når du er på innloggingssiden.</li>
+                        <li>Skriv inn din jobb-mailaddresse</li>
+                        <li>Sjekk mailen din og skriv inn koden i det angitte feltet. PS: Vær obs på at emailen</li>
+                    </ol>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -65,12 +87,11 @@
             button.addEventListener('click', () => {
                 const item = button.parentElement;
                 item.classList.toggle('active');
-
                 const panel = item.querySelector('.accordion-body');
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
+                if (item.classList.contains('active')) {
                     panel.style.maxHeight = panel.scrollHeight + 'px';
+                } else {
+                    panel.style.maxHeight = '0';
                 }
             });
         });

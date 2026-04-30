@@ -1,10 +1,11 @@
 * {
     font-family: 'DM Sans', sans-serif;
     box-sizing: border-box;
-    background-color: #0d1b2a;
+   
 }
 
 html {
+     background-color: #0d1b2a;
     margin: 0;
     overflow: hidden;
 	display: flex;
@@ -12,8 +13,8 @@ html {
 }
 
 .content {
-   margin-left: 10%;
-   margin-right: 10%;
+   margin-left: 25%;
+   margin-right: 25%;
    color: white; 
 }
 
@@ -65,16 +66,28 @@ section {
 .accordion-body {
     max-height: 0;
     overflow: hidden;
-    background-color: transparent;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.5s ease;
     padding: 0 15px;
 }
-
 .accordion p {
     background-color: transparent;
+    line-height: 1.2;
+    font-size: 1.1em;
+}
+
+.accordion-list {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.accordion-list li {
+    background-color: transparent;
+    color: white;
+    padding-left: 8px;
+    margin-bottom: 6px;
 }
 
 .accordion-item.active .accordion-body {
     padding: 15px;
-    max-height: 500px;
+    max-height: 1000px;
 }

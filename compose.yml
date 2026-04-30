@@ -1,0 +1,26 @@
+# The Compose format version, which is commonly 3.9, not to be mistakened by your app version or Docker Engine.
+version: "3.9" 
+
+
+services:
+  app:
+    # This tells Compose to build the Dockerfile in the current directory. Your container is given a random name now, remove the dot and insert the name you want to change it.
+    build: .
+    
+    # Give your container a name.
+    container_name: nordtek-solutions
+      
+    # Defines the ports. Left side you can use any port you want as long as it's not already in use while the right side, the container port, has to match your app. Usually defined in app by "app.run(debug=True, host="0.0.0.0", port=5000)".
+    ports:
+      - "2000:5000"
+        
+    # Optional. Adds emvironment variables if needed.
+    environment:
+      - ENV=development
+      
+    # Optional. Adds a volume (for development auto-reload) and makes changes on your computer appear inside the container instantly.
+    volumes:
+      - .:/app
+      
+    # Optional. Adss a restart policy that's good for servers that hsouldn't be stopped.
+    restart: unless-stopped
