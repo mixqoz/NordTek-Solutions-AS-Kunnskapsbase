@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
+
+{% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='indexStyle.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static', filename='navbarStyle.css') }}">
-    <title>Hjem</title>
-</head>
-<body>
-	<!-- Importer navbar -->
-    {% include 'navbar.html' %}
+{% endblock %}
+
+{% block title %}Hjem{% endblock %}
+
+{% block content %}
 	<br>
 	
 	<!-- Innhold -->
@@ -32,8 +29,4 @@
 		</div>
 		
 	</div>
-
-	
-
-</body>
-</html>
+{% endblock %}

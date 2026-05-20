@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<body>
-  <nav class="navbar">
+<nav class="navbar">
     <div class="navbar_inner">
         <a class="navbar_brand" href="{{ url_for('hjem') }}">
             <img src="/static/images/logo.jpg" class="navbar_logo">
@@ -10,11 +8,10 @@
             <span></span>
             <span></span>
         </button>
-          <ul class="navbar_links" id="navLinks">
-              <li><a href="{{ url_for('lovverk') }}" class="navbar_link {% if request.endpoint == 'lovverk' %}navbar_link--active{% endif %}">Lovverk</a></li>
-              <li><a href="{{ url_for('kundesupport') }}" class="navbar_link {% if request.endpoint == 'kundesupport' %}navbar_link--active{% endif %}">Kundesupport</a></li>
-              <li><a href="{{ url_for('artikkler') }}" class="navbar_link {% if request.endpoint == 'artikkler' %}navbar_link--active{% endif %}">Artikkler</a></li>
-          </ul>
-      </div>
-  </nav>
-</body>
+        <ul class="navbar_links" id="navLinks">
+            <li><a href="{{ url_for('lovverk') }}" class="navbar_link {% if request.endpoint == 'lovverk' %}navbar_link--active{% endif %}">Lovverk</a></li>
+            <li><a href="{{ url_for('kundesupport') }}" class="navbar_link {% if request.endpoint == 'kundesupport' %}navbar_link--active{% endif %}">Kundesupport</a></li>
+            <li><a href="{{ url_for('artikkler') }}" class="navbar_link {% if request.endpoint == 'artikkler' %}navbar_link--active{% endif %}">Artikkler</a></li>
+        </ul>
+    </div>
+</nav>

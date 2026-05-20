@@ -1,100 +1,14 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends 'base.html' %}
+
+{% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='artikklerStyle.css') }}">
-    <title>Artikkler - Guider og FAQ</title>
-</head>
-<body>
-    {% include 'navbar.html' %}
-    
-    <br>
-    <div class="content">
-        <h1>Artikkler</h1>
+{% endblock %}
 
-		<br>
-        
-		<!-- FAQ seksjon -->
-        <h2>Ofte Stilte Spørsmål (FAQ)</h2>
-        <div class="accordion">
-            
-            <div class="accordion-item">
-                <button class="accordion-header">Hvordan beskytter jeg personopplysninger?</button>
-                <div class="accordion-body">
-                    <p>Det er viktig å følge GDPR-regelverket og implementere passende sikkerhetstiltak i dine IT-systemer.</p>
-                </div>
-            </div>
+{% block title %}Artikkler - Guider og FAQ{% endblock %}
 
-            <div class="accordion-item">
-                <button class="accordion-header">Hva er vanlig praksis for datasikkerhet?</button>
-                <div class="accordion-body">
-                    <p>Bruk kryptering, tofaktorautentisering og regelmessige sikkerhetskopier for å sikre data.</p>
-                </div>
-            </div>
-            
-        </div>
-
-		<br>
-
-		<!-- Guider seksjon -->
-        <h2>Guider</h2>
-        <div class="accordion">
-
-            <div class="accordion-item">
-                <button class="accordion-header">Slik setter du opp en sikker nettside</button>
-                <div class="accordion-body">
-                    <p>Følg best practices for SSL-sertifikater, oppdateringer og sikkerhetstiltak.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header">Hvordan håndtere dataoverføring</button>
-                <div class="accordion-body">
-                    <p>Bruk kryptering og sikre protokoller som HTTPS for data som overføres.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header">Hvordan logge inn</button>
-                <div class="accordion-body">
-                    <p>Henvend deg til vår offisielle side: nordtek.no og se oppe i høyre hjørne for innloggings knappen.
-                        Logg inn med brukernavn og passord.
-                    </p>
-                </div>
-            </div>
-
-           <div class="accordion-item">
-                <button class="accordion-header">Hvordan tilbakestille passord</button>
-                <div class="accordion-body">
-                    <p>Dersom du ønsker å tilbakestille passordet ditt:</p>
-                    <br>
-                    <ol class="accordion-list">
-                        <li>Trykk "Glemt passord" når du er på innloggingssiden.</li>
-                        <li>Skriv inn din jobb-mailaddresse</li>
-                        <li>Sjekk mailen din og skriv inn koden i det angitte feltet. PS: Vær obs på at emailen</li>
-                    </ol>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <script>
-        // JavaScript for å håndtere accordion
-        // Skjekker om bruker har klikket header og åpner/lukker body korrespnt ved å endre høyde
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                item.classList.toggle('active');
-                const panel = item.querySelector('.accordion-body');
-                if (item.classList.contains('active')) {
-                    panel.style.maxHeight = panel.scrollHeight + 'px';
-                } else {
-                    panel.style.maxHeight = '0';
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+{% block content %}
+<br>
+<div class="content">
+    ...
+</div>
+{% endblock %}

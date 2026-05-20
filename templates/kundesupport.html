@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{{ url_for('static', filename='kundesupportStyle.css') }}">
-	<title>Kunde Support</title>
-</head>
-<body>
-	<!-- Importer navbar -->
-	{% include 'navbar.html' %} 
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='kundesupportStyle.css') }}">
+{% endblock %}
+
+{% block title %}Kundesupport{% endblock %}
+
+{% block content %}
 
 	<br>
 
@@ -29,5 +27,6 @@
             <p>Vårt support-team er tilgjengelig fra kl. 09:00 til 17:00 på hverdager.</p>
         </section>
     </div>
-</body>
-</html>
+
+
+{% endblock %}
